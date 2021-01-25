@@ -1,13 +1,15 @@
 const api = {
     key: "3079dacf2f22621fe2936cb654d93328",
-    base: "http://api.openweathermap.org/data/2.5/"
+    base: "https://api.openweathermap.org/data/2.5/"
 }
 
 const search = document.querySelector('.weather-app__search_input');
 search.addEventListener('keypress', Show);
 
 const btn_search = document.querySelector('.weather-app__search-btn');
+
 btn_search.addEventListener('click', Show1);
+btn_search.addEventListener('touchstart', handleInteraction);
 
 function Show(button) {
     if (button.keyCode === 13) {
@@ -15,6 +17,11 @@ function Show(button) {
     }
 }
 function Show1() {
+    GetResult(search.value);
+}
+
+function handleInteraction(evt) {
+    evt.preventDefault()
     GetResult(search.value);
 }
 
