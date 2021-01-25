@@ -19,6 +19,7 @@
     font-size: 10px;
     outline: none;
     border: none;
+    background: #fff;
 }
 .weather-app__search-btn:active {
     background: #dbdbdb;
