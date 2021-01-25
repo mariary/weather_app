@@ -10,7 +10,18 @@
     color: #fff;
 }
 .weather-app__search {
-    padding: 50px 0 30px;
+    padding: 50px 0 20px;
+}
+.weather-app__search-btn {
+    display: block;
+    margin: 20px auto 0;
+    font-family: 'Cinzel';
+    font-size: 10px;
+    outline: none;
+    border: none;
+}
+.weather-app__search-btn:active {
+    background: #dbdbdb;
 }
 .weather-app__search_input {
     width: 60%;
@@ -38,8 +49,21 @@
     font-size: 40px;
     font-weight: 300;
 }
-@media screen and (max-width: 400px) {
+
+.hidden {
+    display: none;
+}
+@media screen and (max-width: 500px) {
     .weather-app {
         height: 500px;
+    }
+    .hidden {
+        display: block;
+    }
+    .weather-app__search_input{
+        font-size: 15px;
+    }
+    .weather-app__content_temp{
+        font-size: 40px;
     }
 }

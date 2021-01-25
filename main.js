@@ -6,10 +6,16 @@ const api = {
 const search = document.querySelector('.weather-app__search_input');
 search.addEventListener('keypress', Show);
 
+const btn_search = document.querySelector('.weather-app__search-btn');
+btn_search.addEventListener('click', Show1);
+
 function Show(button) {
     if (button.keyCode === 13) {
         GetResult(search.value);
     }
+}
+function Show1() {
+    GetResult(search.value);
 }
 
 function GetResult(name) {
