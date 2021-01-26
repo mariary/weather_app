@@ -16,6 +16,7 @@ function Show(button) {
         GetResult(search.value);
     }
 }
+
 function Show1() {
     GetResult(search.value);
 }
@@ -26,14 +27,19 @@ function handleInteraction(evt) {
 }
 
 function GetResult(name) {
+
     fetch(`${api.base}weather?q=${name}&units=metric&appid=${api.key}`)
         .then(weather => {
             return weather.json();
-        }).then(DisplayResult);
+        }).then(DisplayResult)
+
+    .catch((error) => {
+        alert("There isn't such city")
+    });
+
 }
 
 function DisplayResult(weather) {
-    console.log(weather);
 
     Background(weather);
 
@@ -71,25 +77,19 @@ function GetData(now) {
 
 function Background(weather) {
     let back = document.querySelector('.weather-app')
-    if (weather.weather[0].main==='Drizzle') {
+    if (weather.weather[0].main === 'Drizzle') {
         back.style.background = 'url("content/drizzle.jpg")'
-    }
-    else if (weather.weather[0].main==='Rain') {
+    } else if (weather.weather[0].main === 'Rain') {
         back.style.background = 'url("content/rain.jpg")'
-    }
-    else if (weather.weather[0].main==='Mist') {
+    } else if (weather.weather[0].main === 'Mist') {
         back.style.background = 'url("content/mist.jpg")'
-    }
-    else if (weather.weather[0].main==='Sunny') {
+    } else if (weather.weather[0].main === 'Sunny') {
         back.style.background = 'url("content/sunny.jpg")'
-    }
-    else if (weather.weather[0].main==='Clouds') {
+    } else if (weather.weather[0].main === 'Clouds') {
         back.style.background = 'url("content/clouds.jpg")'
-    }
-    else if (weather.weather[0].main==='Snow') {
+    } else if (weather.weather[0].main === 'Snow') {
         back.style.background = 'url("content/snow.jpg")'
-    }
-    else if (weather.weather[0].main==='Clear') {
+    } else if (weather.weather[0].main === 'Clear') {
         back.style.background = 'url("content/clear.jpg")'
     }
 }
