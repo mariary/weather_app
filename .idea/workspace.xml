@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../instacat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -51,6 +51,7 @@
       <workItem from="1611559122622" duration="4952000" />
       <workItem from="1611645648306" duration="20000" />
       <workItem from="1611650779001" duration="1449000" />
+      <workItem from="1611656160292" duration="180000" />
     </task>
     <servers />
   </component>
