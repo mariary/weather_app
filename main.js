@@ -78,18 +78,25 @@ function GetData(now) {
 function Background(weather) {
     let back = document.querySelector('.weather-app')
     if (weather.weather[0].main === 'Drizzle') {
-        back.style.background = 'url("content/drizzle.jpg")'
+        back.style.background = 'url("content/drizzle.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     } else if (weather.weather[0].main === 'Rain') {
-        back.style.background = 'url("content/rain.jpg")'
+        back.style.background = 'url("content/rain.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     } else if (weather.weather[0].main === 'Mist') {
-        back.style.background = 'url("content/mist.jpg")'
+        back.style.background = 'url("content/mist.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     } else if (weather.weather[0].main === 'Sunny') {
-        back.style.background = 'url("content/sunny.jpg")'
+        back.style.background = 'url("content/sunny.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     } else if (weather.weather[0].main === 'Clouds') {
-        back.style.background = 'url("content/clouds.jpg")'
+        back.style.background = 'url("content/clouds.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     } else if (weather.weather[0].main === 'Snow') {
-        back.style.background = 'url("content/snow.jpg")'
+        back.style.background = 'url("content/snow.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     } else if (weather.weather[0].main === 'Clear') {
-        back.style.background = 'url("content/clear.jpg")'
+        back.style.background = 'url("content/clear.jpg") no-repeat'
+        back.style.backgroundSize = 'cover'
     }
 }
